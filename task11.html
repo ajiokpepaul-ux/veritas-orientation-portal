@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veritas University - Orientation Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f0f2f5;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #1a3c5e;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .sub {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background: #1a3c5e;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 25px;
+        }
+
+        button:hover {
+            background: #0e2a44;
+        }
+
+        .required {
+            color: red;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Veritas University</h1>
+    <div class="sub">Orientation Portal Registration</div>
+
+    <!-- MAIN FORM TAG - basic structure -->
+    <form action="#" method="post">
+        <!-- Student Name -->
+        <label>Full Name <span class="required">*</span></label>
+        <input type="text" name="fullname" placeholder="Enter your full name" required>
+
+        <!-- Matric Number -->
+        <label>Matric Number <span class="required">*</span></label>
+        <input type="text" name="matric" placeholder="e.g., VU/2026/001" required>
+         <!-- Email -->
+        <label>Email Address <span class="required">*</span></label>
+        <input type="email" name="email" placeholder="you@veritas.edu.ng" required>
+
+       <label>Age <span class="required">*</span></label>
+        <input type="number" name="age" min="16" max="100" placeholder="Enter your age" required>
+
+        <!-- Agreement -->
+        <label style="font-weight: normal; display: flex; align-items: center; gap: 8px;">
+            <input type="checkbox" name="agree" required style="width: auto;"> 
+            I confirm that the information provided is correct <span class="required">*</span>
+        </label>
+<label>Date of Birth <span class="required">*</span></label>
+        <input type="date" name="dob" required>
+         <!-- File Upload -->
+        <label>Upload Document (e.g., Admission Letter) <span class="required">*</span></label>
+        <input type="file" name="document" accept=".pdf,.jpg,.png" required>
+
+ <!-- Faculty -->
+        <label>Faculty <span class="required">*</span></label>
+        <select name="faculty" required>
+            <option value="">-- Select Faculty --</option>
+            <option>Natural & Applied Sciences</option>
+            <option>Humanities</option>
+            <option>Management Sciences</option>
+            <option>Social Sciences</option>
+            <option>Law</option>
+            <option>Engineering</option>
+        </select>
+
+        <!-- Comments -->
+        <label>Any Special Needs / Comments</label>
+        <textarea name="comments" rows="3" placeholder="Dietary, accessibility, or other notes..."></textarea>
+        <button type="submit">Submit Registration</button>
+
+    </form>
+</div>
+
+</body>
+</html>
