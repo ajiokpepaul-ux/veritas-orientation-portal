@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veritas University - Navigation Bar</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            
+            <div class="nav-logo">
+                <img src="https://via.placeholder.com/50x50/1a3c5e/white?text=VU" alt="Veritas University Logo">
+                <span>Veritas Uni</span>
+            </div>
+            
+        
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">
+                        <img src="https://img.icons8.com/ios-filled/20/ffffff/home.png" alt="Home Icon" class="nav-icon">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">
+                        <img src="https://img.icons8.com/ios-filled/20/ffffff/info.png" alt="About Icon" class="nav-icon">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">
+                        <img src="https://img.icons8.com/ios-filled/20/ffffff/contact.png" alt="Contact Icon" class="nav-icon">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Mobile Hamburger Menu -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+   
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Veritas University</h1>
+            <p>Excellence in Truth & Knowledge</p>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Veritas University is committed to providing quality education and fostering academic excellence.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: info@veritas.edu.ng | Phone: +234 123 456 7890</p>
+        </div>
+    </section>
+<link rel="stylesheet" href="NAVBAR.CSS">
+   
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+    </script>
+</body>
+</html>
